@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Specialist & Pentester | Portfolio</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0c10;
+            color: #e0e0e0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Matrix-like glow */
+        .glow-text {
+            text-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Navbar */
+        nav {
+            background: rgba(10, 12, 16, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #1f2a3a;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #00ff41;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #00ff41;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: radial-gradient(circle at 30% 10%, #11161f, #050708);
+            margin-top: 0;
+            padding-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h1 span {
+            color: #00ff41;
+            border-bottom: 3px solid #00ff41;
+        }
+
+        .typing {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin: 1rem 0;
+            color: #aaa;
+        }
+
+        .highlight {
+            color: #00ff41;
+            font-weight: 600;
+        }
+
+        .btn-group {
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            margin-right: 1rem;
+        }
+
+        .btn-primary {
+            background: #00ff41;
+            color: #0a0c10;
+            border: 1px solid #00ff41;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: #00ff41;
+            box-shadow: 0 0 12px rgba(0, 255, 65, 0.4);
+        }
+
+        .btn-outline {
+            border: 1px solid #00ff41;
+            color: #00ff41;
+        }
+
+        .btn-outline:hover {
+            background: #00ff41;
+            color: #0a0c10;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            width: 70px;
+            height: 3px;
+            background: #00ff41;
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: #11151c;
+            border-radius: 12px;
+            padding: 1.8rem;
+            border: 1px solid #1f2a3a;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px -5px rgba(0, 255, 65, 0.2);
+            border-color: #00ff41;
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            color: #00ff41;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .project-tags span {
+            display: inline-block;
+            background: #1a202c;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            margin-right: 8px;
+            margin-top: 10px;
+            color: #00ff41;
+        }
+
+        /* Contact Cards */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: #11151c;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            min-width: 200px;
+            border: 1px solid #2a3440;
+            transition: 0.3s;
+        }
+
+        .contact-card i {
+            font-size: 2.5rem;
+            color: #00ff41;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card a {
+            color: #00ff41;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-card p {
+            font-size: 0.9rem;
+            word-break: break-all;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #1f2a3a;
+            margin-top: 4rem;
+            font-size: 0.8rem;
+            color: #6c7a8a;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .typing {
+                font-size: 1.2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+            .contact-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="logo">P4wn<span>3r</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Rahul Sharma</span></h1>
+            <div class="typing">> <span id="typed-text"></span><span class="highlight">_</span></div>
+            <p style="max-width: 600px; margin-top: 1rem;">
+                Certified Penetration Tester & Cybersecurity Specialist. 
+                I break things securely so you can sleep peacefully. 
+                Specialized in Red Teaming, Web App Pentesting, and Social Engineering.
+            </p>
+            <div class="btn-group">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Hack Me? → Contact</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" style="padding: 80px 0;">
+    <div class="container">
+        <h2 class="section-title">Proven Exploits & Projects</h2>
+        <div class="projects-grid">
+            
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-database"></i></div>
+                <h3>SQL Injection Automation</h3>
+                <p>Automated blind SQLi exploitation tool for extracting sensitive data from enterprise DBs. Reduced manual testing time by 70%.</p>
+                <div class="project-tags">
+                    <span>SQLMap Custom</span>
+                    <span>Python</span>
+                    <span>Burp Suite</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-wifi"></i></div>
+                <h3>Corporate Red Team Engagement</h3>
+                <p>Simulated APT attack for a FinTech client. Gained Domain Admin in 48 hours. Delivered full remediation roadmap.</p>
+                <div class="project-tags">
+                    <span>Cobalt Strike</span>
+                    <span>BloodHound</span>
+                    <span>Mimikatz</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-code-branch"></i></div>
+                <h3>Bug Bounty: IDOR Chain</h3>
+                <p>Discovered critical Insecure Direct Object Reference leading to PII leakage of 50k+ users. Earned $5k bounty & CVE-2024-123.</p>
+                <div class="project-tags">
+                    <span>IDOR</span>
+                    <span>JWT Tampering</span>
+                    <span>Recon</span>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Zero-Day: XSS to RCE</h3>
+                <p>Found a chain from stored XSS to remote code execution on a CMS platform. Coordinated disclosure with vendor.</p>
+                <div class="project-tags">
+                    <span>JavaScript</span>
+                    <span>RCE</span>
+                    <span>0day Research</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" style="padding: 80px 0; background: #0d1117;">
+    <div class="container">
+        <h2 class="section-title">Connect / Hire Me</h2>
+        <div class="contact-info">
+            <div class="contact-card">
+                <i class="fab fa-upwork"></i>
+                <h3>Upwork</h3>
+                <a href="https://www.upwork.com/freelancers/~01abcdefgh" target="_blank">Profile: @pentester_expert</a>
+                <p style="font-size:12px; margin-top:8px;">Top Rated Plus | 100% Job Success</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email (PGP)</h3>
+                <a href="mailto:contact@cyberpentest.com">contact@cyberpentest.com</a>
+                <p style="font-size:11px;">Fingerprint: 3A4B 7C9D E2F1 8845</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Secure Signal</h3>
+                <p>+880 1XXX-XXXXXX</p>
+                <p style="font-size:12px;">(Signal / Telegram only)</p>
+            </div>
+            <div class="contact-card">
+                <i class="fab fa-github"></i>
+                <h3>Exploit Repos</h3>
+                <a href="#">github.com/p4wn3r-labs</a>
+                <p>Open source tools & CVEs</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2025 | Ethical Hacking Portfolio | “Trust, but verify.” — Ronald Reagan</p>
+        <p style="margin-top: 10px;">
+            <i class="fas fa-shield-virus"></i> PGP Key Available | Vulnerability Disclosure Program
+        </p>
+    </div>
+</footer>
+
+<script>
+    // Typing Animation
+    const roles = ["Penetration Tester", "Red Team Operator", "Bug Bounty Hunter", "OSCP | CRTO"];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typedTextSpan = document.getElementById("typed-text");
+
+    function typeEffect() {
+        const currentRole = roles[roleIndex];
+        if (isDeleting) {
+            typedTextSpan.innerText = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typedTextSpan.innerText = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 2000);
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            setTimeout(typeEffect, 500);
+        } else {
+            setTimeout(typeEffect, isDeleting ? 70 : 120);
+        }
+    }
+
+    typeEffect();
+</script>
+</body>
+</html>
